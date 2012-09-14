@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:Iceberg/Base.xctemplate"
+      name = "Base.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/Bundle Base.xctemplate"
+      name = "Bundle Base.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/Cocoa Touch Application.xctemplate"
+      name = "Cocoa Touch Application.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/Iceberg Base.xctemplate"
+      name = "Iceberg Base.xctemplate">
+      <FileRef
+         location = "group:MainStoryboard_iPad.storyboard">
+      </FileRef>
+      <FileRef
+         location = "group:MainStoryboard_iPhone.storyboard">
+      </FileRef>
+      <FileRef
+         location = "group:TemplateIcon.tiff">
+      </FileRef>
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+      <FileRef
+         location = "group:ViewControlleriPad.xib">
+      </FileRef>
+      <FileRef
+         location = "group:ViewControlleriPhone.xib">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/iPhone Base.xctemplate"
+      name = "iPhone Base.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/Objective-C Application.xctemplate"
+      name = "Objective-C Application.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/Prefixable.xctemplate"
+      name = "Prefixable.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+   <Group
+      location = "group:Iceberg/Storyboard Application.xctemplate"
+      name = "Storyboard Application.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
+</Workspace>
