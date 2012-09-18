@@ -15,60 +15,10 @@
 		<dict>
 			<key>Default</key>
 			<string>true</string>
-			<key>Description</key>
-			<string>Whether the application should use Interface Builder Storyboards (requires iOS 5.0)</string>
 			<key>Identifier</key>
 			<string>useStoryboard</string>
-			<key>Name</key>
-			<string>Use Storyboards</string>
-			<key>SortOrder</key>
-			<integer>1</integer>
-			<key>Type</key>
-			<string>checkbox</string>
 			<key>Units</key>
 			<dict>
-				<key>false</key>
-				<array>
-					<dict>
-						<key>Definitions</key>
-						<dict>
-							<key>*:implementation:initSection:initViewController</key>
-							<dict>
-								<key>Beginning</key>
-								<string>- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {</string>
-								<key>End</key>
-								<string>    }
-    return self;
-}
-							</string>
-								<key>Indent</key>
-								<integer>2</integer>
-							</dict>
-							<key>___VARIABLE_classPrefix:identifier___AppDelegate.m:applicationdidFinishLaunchingWithOptions</key>
-							<dict>
-								<key>Beginning</key>
-								<string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    self.window = ___RP___[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]]___AR___;
-    // Override point for customization after application launch.</string>
-								<key>End</key>
-								<string>    [self.window makeKeyAndVisible];
-    return YES;
-}
-</string>
-								<key>Indent</key>
-								<integer>1</integer>
-							</dict>
-						</dict>
-						<key>Nodes</key>
-						<array>
-							<string>___PACKAGENAME___-Prefix.pch:Availability:iPhoneAvailability:4</string>
-						</array>
-					</dict>
-				</array>
 				<key>true</key>
 				<array>
 					<dict>
@@ -91,7 +41,33 @@
 								<key>Beginning</key>
 								<string>- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.</string>
+    // Override point for customization after application launch.
+
+    #if __IS_NEWLYCREATED
+    NSString *iOSVersion = [[UIDevice currentDevice] systemVersion];
+    
+    UILabel *uiLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 60)];
+    uiLabel.text = [NSString stringWithFormat:@&quot;%@ %@&quot;, NSLocalizedString(@&quot;hello&quot;, @&quot;&quot;), kDeviceIdiomHello];
+    uiLabel.textAlignment = UITextAlignmentCenter;
+    uiLabel.font = [UIFont systemFontOfSize:30];
+    [uiLabel sizeToFit];
+    
+    CGSize bounds = self.window.bounds.size;
+    [self.window.rootViewController.view addSubview:uiLabel];
+    uiLabel.center = CGPointMake(bounds.width/2, bounds.height/2);
+    
+    UILabel *uiLabel2 = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 120, 44)];
+    uiLabel2.text = [NSString stringWithFormat:@&quot;iOS Version: %@&quot;, iOSVersion];
+    uiLabel2.font = [UIFont systemFontOfSize:14];
+    [uiLabel2 sizeToFit];
+
+    [self.window.rootViewController.view addSubview:uiLabel2];
+    uiLabel2.center = uiLabel.center;
+    
+    CGRect frame = uiLabel2.frame;
+    uiLabel2.frame = CGRectMake(frame.origin.x, frame.origin.y + 27, frame.size.width, frame.size.height);
+    #endif
+</string>
 								<key>End</key>
 								<string>    return YES;
 }
@@ -163,6 +139,71 @@
 						</dict>
 					</dict>
 				</array>
+			</dict>
+		</dict>
+		<dict>
+			<key>Default</key>
+			<string></string>
+			<key>Identifier</key>
+			<string>depedencyManagement</string>
+			<key>Name</key>
+			<string>Dependency Manager</string>
+			<key>Description</key>
+			<string>Dependency Management</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Units</key>
+			<dict>
+				<key> </key>
+				<string></string>
+				<key>VendorKit</key>
+				<dict>
+					<key>Nodes</key>
+					<array>
+						<string>../VendorFile</string>
+					</array>
+					<key>Definitions</key>
+					<dict>
+						<key>../VendorFile</key>
+						<dict>
+							<key>Group</key>
+							<string>Dependencies</string>
+							<key>Beginning</key>
+							<string># App Dependencies based on VendorKit
+# run `vendor install` in your terminal
+lib &quot;AFNetworking&quot;, &quot;~&gt; 0.8&quot;
+lib &quot;JSONKit&quot;, :git =&gt; &quot;https://github.com/johnezang/JSONKit.git&quot;
+lib &quot;RaptureXML&quot;, :git =&gt; &quot;https://github.com/ZaBlanc/RaptureXML.git&quot;</string>
+							<key>TargetIndices</key>
+							<array/>
+						</dict>
+					</dict>
+				</dict>
+				<key>CocoaPods</key>
+				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>../PodFile</key>
+						<dict>
+							<key>Group</key>
+							<string>Dependencies</string>
+							<key>Beginning</key>
+							<string># App Dependencies based on CocoaPods
+# run `pod install` in your terminal
+
+platform :ios
+pod &apos;AFNetworking&apos;, &apos;0.10.1&apos;
+pod &apos;JSONKit&apos;,		&apos;1.4&apos;
+pod &apos;RaptureXML&apos;,	&apos;~&gt;1.0.0&apos;</string>
+							<key>TargetIndices</key>
+							<array/>
+						</dict>
+					</dict>
+					<key>Nodes</key>
+					<array>
+						<string>../PodFile</string>
+					</array>
+				</dict>
 			</dict>
 		</dict>
 	</array>

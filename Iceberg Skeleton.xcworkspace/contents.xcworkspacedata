@@ -72,4 +72,11 @@
          location = "group:TemplateInfo.plist">
       </FileRef>
    </Group>
+   <Group
+      location = "group:Iceberg/Iceberg iOS Application.xctemplate"
+      name = "Iceberg iOS Application.xctemplate">
+      <FileRef
+         location = "group:TemplateInfo.plist">
+      </FileRef>
+   </Group>
 </Workspace>

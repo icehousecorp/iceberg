@@ -28,6 +28,7 @@
 	<array>
 		<string>___PACKAGENAME___-Info.plist:CFBundleIdentifier</string>
 		<string>en.lproj/InfoPlist.strings:Instructions</string>
+		<string>en.lproj/Localizable.strings:Instructions</string>
 	</array>
 	<key>Definitions</key>
 	<dict>
@@ -51,6 +52,8 @@
 			<key>SubstituteMacros</key>
 			<true/>
 		</dict>
+		<key>New item</key>
+		<string></string>
 		<key>___PACKAGENAME___-Info.plist:CFBundleIdentifier</key>
 		<string>&lt;key&gt;CFBundleIdentifier&lt;/key&gt;
 &lt;string&gt;___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.${PRODUCT_NAME:rfc1034identifier}&lt;/string&gt;
@@ -63,6 +66,18 @@
 		<key>en.lproj/InfoPlist.strings:Instructions</key>
 		<string>/* Localized versions of Info.plist keys */
 </string>
+		<key>en.lproj/Localizable.strings</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Resources</string>
+				<string>localizations</string>
+			</array>
+		</dict>
+		<key>en.lproj/Localizable.strings:Instructions</key>
+		<string>/* Localization language keys */
+
+&quot;hello&quot; = &quot;Hello&quot;;</string>
 	</dict>
 </dict>
 </plist>
