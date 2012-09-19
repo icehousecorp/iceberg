@@ -52,8 +52,6 @@
 			<key>SubstituteMacros</key>
 			<true/>
 		</dict>
-		<key>New item</key>
-		<string></string>
 		<key>___PACKAGENAME___-Info.plist:CFBundleIdentifier</key>
 		<string>&lt;key&gt;CFBundleIdentifier&lt;/key&gt;
 &lt;string&gt;___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.${PRODUCT_NAME:rfc1034identifier}&lt;/string&gt;

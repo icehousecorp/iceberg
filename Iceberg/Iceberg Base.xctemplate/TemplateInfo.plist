@@ -10,6 +10,57 @@
 	<true/>
 	<key>Definitions</key>
 	<dict>
+		<key>Resources/assets/images/.image.png</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Resources</string>
+				<string>assets</string>
+				<string>image</string>
+			</array>
+			<key>TargetIndices</key>
+			<array/>
+			<key>Beginning</key>
+			<string>This file including it&apos;s parent directory called &quot;_unused&quot; should be removed from your project</string>
+		</dict>
+		<key>Resources/assets/sounds/.sound.mp3</key>
+		<dict>
+			<key>TargetIndices</key>
+			<array/>
+			<key>Group</key>
+			<array>
+				<string>Resources</string>
+				<string>assets</string>
+				<string>sounds</string>
+			</array>
+			<key>Beginning</key>
+			<string>This file should be removed from your xcode project tree</string>
+		</dict>
+		<key>Resources/assets/icons/.icon.png</key>
+		<dict>
+			<key>Beginning</key>
+			<string>This file should be removed from your xcode project tree</string>
+			<key>TargetIndices</key>
+			<array/>
+			<key>Group</key>
+			<array>
+				<string>Resources</string>
+				<string>assets</string>
+				<string>icons</string>
+			</array>
+		</dict>
+		<key>Resources/databases/.empty.sqlite</key>
+		<dict>
+			<key>Group</key>
+			<array>
+				<string>Resources</string>
+				<string>databases</string>
+			</array>
+			<key>TargetIndices</key>
+			<array/>
+			<key>Beginning</key>
+			<string>This file should be removed from your xcode project tree</string>
+		</dict>
 		<key>../Coding_Guidelines/assets.md</key>
 		<dict>
 			<key>Group</key>
@@ -64,6 +115,10 @@
 	<string>Xcode.Xcode3.ProjectTemplateUnitKind</string>
 	<key>Nodes</key>
 	<array>
+		<string>Resources/assets/images/.image.png</string>
+		<string>Resources/assets/sounds/.sound.mp3</string>
+		<string>Resources/assets/icons/.icon.png</string>
+		<string>Resources/databases/.empty.sqlite</string>
 		<string>../Coding_Guidelines/assets.md</string>
 		<string>../Coding_Guidelines/databases.md</string>
 		<string>../Coding_Guidelines/localizations.md</string>
@@ -166,6 +221,6 @@ self.window.rootViewController = self.viewController;</string>
 		</dict>
 	</array>
 	<key>SortOrder</key>
-	<integer>2</integer>
+	<integer>1</integer>
 </dict>
 </plist>

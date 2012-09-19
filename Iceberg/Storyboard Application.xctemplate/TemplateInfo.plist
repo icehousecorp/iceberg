@@ -154,7 +154,7 @@
 			<string>popup</string>
 			<key>Units</key>
 			<dict>
-				<key> </key>
+				<key>- none -</key>
 				<string></string>
 				<key>VendorKit</key>
 				<dict>
