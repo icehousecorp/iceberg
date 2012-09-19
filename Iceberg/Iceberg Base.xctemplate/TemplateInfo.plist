@@ -61,8 +61,55 @@
 			<key>Beginning</key>
 			<string>This file should be removed from your xcode project tree</string>
 		</dict>
+		<key>../Coding_Guidelines/dependencies.md</key>
+		<dict>
+			<key>Beginning</key>
+			<string>Installing Dependency Manager
+
+This document will guide you to install dependency manager on your Xcode 4.
+Make sure you have latest ruby gem installed.
+
+Run this command first to update Ruby gem:
+
+gem update --system
+
+A. Installing Cocoapods Dependency Manager and Installing Project Dependencies
+
+If you use VendorKit skip to B.	
+Before using CocoaPods in your project, make sure you have installed CocoaPods before or update your current installation to the latest by running :
+
+[sudo] gem install cocoapods
+
+pods setup
+
+Then do this steps:
+
+1. Create a project using Iceberg template, use CocoaPods in the Dependency Manager.
+2. Close your newly created project.
+3. Go to your root directory of your project containing yourproject folder and yourproject.xcodeproj. Make sure you find Podfile file there. If you don&apos;t you should recreate the project using Dependency Manager listed.
+4. Go to your terminal (iTerm, zsh, etc) Run pod install on that directory.
+5. Open your project with yourproject.xcworkspace don&apos;t use yourproject.xcodeproj
+
+B. Installing VendorKit Dependency Manager and Installing Project Dependencies
+
+Install VendorKit by running this command on terminal :
+
+sudo gem install vendor
+Then do this steps:
+
+1. Create a project using Iceberg template, use VendorKit in the Dependency Manager.
+2. Go to your root directory of your project containing yourproject folder and yourproject.xcodeproj. Make sure you find Vendorfile file there. If you don&apos;t you should recreate the project using Dependency Manager listed.
+3. Open terminal and run:
+vendor install</string>
+			<key>Group</key>
+			<string>Dependencies</string>
+			<key>TargetIndices</key>
+			<array/>
+		</dict>
 		<key>../Coding_Guidelines/assets.md</key>
 		<dict>
+			<key>Beginning</key>
+			<string>This group is for storing image assets, such as icons and images</string>
 			<key>Group</key>
 			<array>
 				<string>Resources</string>
@@ -73,6 +120,8 @@
 		</dict>
 		<key>../Coding_Guidelines/databases.md</key>
 		<dict>
+			<key>Beginning</key>
+			<string>This group is for placing database files such as SQLite, JSON, or XML</string>
 			<key>Group</key>
 			<array>
 				<string>Resources</string>
@@ -83,6 +132,8 @@
 		</dict>
 		<key>../Coding_Guidelines/localizations.md</key>
 		<dict>
+			<key>Beginning</key>
+			<string>This group is for placing localizations files</string>
 			<key>Group</key>
 			<array>
 				<string>Resources</string>
@@ -121,6 +172,7 @@
 		<string>Resources/databases/.empty.sqlite</string>
 		<string>../Coding_Guidelines/assets.md</string>
 		<string>../Coding_Guidelines/databases.md</string>
+		<string>../Coding_Guidelines/dependencies.md</string>
 		<string>../Coding_Guidelines/localizations.md</string>
 		<string>___VARIABLE_classPrefix:identifier___ViewController.h:viewControllerInterface</string>
 		<string>___VARIABLE_classPrefix:identifier___ViewController.m:comments</string>
