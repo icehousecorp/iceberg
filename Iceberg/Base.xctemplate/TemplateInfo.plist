@@ -89,7 +89,7 @@
 	<dict>
 		<key>SharedSettings</key>
 		<dict>
-			<key>CLANG_ENABLE_OBJ_ARC</key>
+			<key>CLANG_ENABLE_OBJC_ARC</key>
 			<string>YES</string>
 			<key>GCC_C_LANGUAGE_STANDARD</key>
 			<string>gnu99</string>
