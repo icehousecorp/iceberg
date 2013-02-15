@@ -191,8 +191,8 @@ lib &quot;RaptureXML&quot;, :git =&gt; &quot;https://github.com/ZaBlanc/RaptureX
 							<string># App Dependencies based on CocoaPods
 # run `pod install` in your terminal
 
-platform :ios
-pod &apos;AFNetworking&apos;, &apos;0.10.1&apos;
+platform :ios,&apos;5.0&apos;
+pod &apos;AFNetworking&apos;, &apos;1.1.0&apos;
 pod &apos;JSONKit&apos;,		&apos;1.4&apos;
 pod &apos;RaptureXML&apos;,	&apos;~&gt;1.0.0&apos;</string>
 							<key>TargetIndices</key>

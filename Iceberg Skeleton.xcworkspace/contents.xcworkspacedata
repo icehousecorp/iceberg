@@ -26,6 +26,9 @@
       location = "group:Iceberg/Iceberg Base.xctemplate"
       name = "Iceberg Base.xctemplate">
       <FileRef
+         location = "group:___PACKAGENAMEASIDENTIFIER___.xcdatamodeld">
+      </FileRef>
+      <FileRef
          location = "group:MainStoryboard_iPad.storyboard">
       </FileRef>
       <FileRef
